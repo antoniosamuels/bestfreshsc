@@ -18,13 +18,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z4s-Qb-tDb">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z4s-Qb-tDb">
+                                <rect key="frame" x="0.0" y="166" width="375" height="501"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="501" id="j5K-d8-0m0"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="header" rowHeight="120" id="1e1-Rp-Szs">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1e1-Rp-Szs" id="lzf-7c-N4H">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="av9-Wf-ktU">
+                                                    <rect key="frame" x="5" y="5" width="365" height="109.5"/>
+                                                    <color key="backgroundColor" white="0.89076063368055558" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="av9-Wf-ktU" secondAttribute="bottom" constant="5" id="9jP-ha-Feq"/>
+                                                <constraint firstAttribute="trailing" secondItem="av9-Wf-ktU" secondAttribute="trailing" constant="5" id="EYR-me-Jla"/>
+                                                <constraint firstItem="av9-Wf-ktU" firstAttribute="top" secondItem="lzf-7c-N4H" secondAttribute="top" constant="5" id="FPT-mH-dXY"/>
+                                                <constraint firstItem="av9-Wf-ktU" firstAttribute="leading" secondItem="lzf-7c-N4H" secondAttribute="leading" constant="5" id="Qfa-Wq-yA5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top-cow-background" translatesAutoresizingMaskIntoConstraints="NO" id="ykO-eC-VD6">
+                                <rect key="frame" x="0.0" y="20" width="375" height="145"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="best-fresh-logo-sm" translatesAutoresizingMaskIntoConstraints="NO" id="jyI-cX-yv2">
+                                <rect key="frame" x="0.0" y="42.5" width="375" height="101.5"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ykO-eC-VD6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1rw-S3-9pk"/>
+                            <constraint firstItem="ykO-eC-VD6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="9lq-ti-vf8"/>
+                            <constraint firstItem="jyI-cX-yv2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Dy6-kP-32s"/>
+                            <constraint firstItem="z4s-Qb-tDb" firstAttribute="top" secondItem="jyI-cX-yv2" secondAttribute="bottom" constant="22" id="HOD-Eq-57i"/>
+                            <constraint firstItem="ykO-eC-VD6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XI5-uL-j6l"/>
+                            <constraint firstItem="z4s-Qb-tDb" firstAttribute="leading" secondItem="ykO-eC-VD6" secondAttribute="leading" id="bU2-0A-apl"/>
+                            <constraint firstItem="jyI-cX-yv2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="dMK-Xv-f6I"/>
+                            <constraint firstItem="jyI-cX-yv2" firstAttribute="centerY" secondItem="ykO-eC-VD6" secondAttribute="centerY" id="gfy-LA-Wt8"/>
+                            <constraint firstItem="z4s-Qb-tDb" firstAttribute="top" secondItem="ykO-eC-VD6" secondAttribute="bottom" constant="1" id="grG-b1-gCS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jyI-cX-yv2" secondAttribute="trailing" id="gxG-8Q-Ffd"/>
+                            <constraint firstItem="z4s-Qb-tDb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="q1F-1K-Ncz"/>
+                            <constraint firstItem="z4s-Qb-tDb" firstAttribute="trailing" secondItem="ykO-eC-VD6" secondAttribute="trailing" id="s8M-yN-Ezp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -33,4 +77,8 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="best-fresh-logo-sm" width="139" height="99"/>
+        <image name="top-cow-background" width="375" height="212"/>
+    </resources>
 </document>
